@@ -25,7 +25,7 @@ import cv2
 
 
 filepath = 'mask1_model_resnet50.pth'
-model = torch.load(filepath)
+model=torch.load(filepath, map_location=torch.device('cpu'))
 
 
 class_names = ['with_mask',
